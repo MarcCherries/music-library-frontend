@@ -3,10 +3,12 @@ import axios from 'axios'
 import DisplayMusic from './Components/DisplayMusic';
 import SearchBar from './Components/SearchBar';
 import CreateSong from './Components/CreateSong';
+import UpdateSongModal from './UpdateSongModal';
 
 function App() {
 
   const [songs, setSongs] = useState([])
+  const [modal, setModal] = useState(false)
   
   function searchSong(input){
     let searchResult = songs.filter((song)=>{
@@ -48,11 +50,13 @@ function App() {
 
   return (
     <div >
-      
+        <button  onClick={()=> setModal(true)} id='myBtn' className="modal-update">Update Song</button>
+         <UpdateSongModal show={modal} onClose={() =>setModal(false)} />
           <CreateSong addSong={addSong}/>
 
     <DisplayMusic parentSongs={songs} />
     <SearchBar searchSong={searchSong}/>
+ 
 
     </div>
   );
