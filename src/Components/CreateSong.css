@@ -1,13 +1,24 @@
 .create-form {
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     margin-top: 4rem;
-    margin-left: auto;
+    margin-left: 25rem;
     margin-right: auto;
-    width: 50%;
+    width: 35%;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 input {
-    width: 20rem;
+    width: 80%;
+    margin: auto;
     margin-top: 1rem;
+}
+
+button {
+    width: 2rem;
+    margin: 1rem;
+    margin-left: 0;
+   
 }

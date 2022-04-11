@@ -22,8 +22,8 @@ const DisplayMusic = (props) => {
                 <table>
                         <tr>
                             <td className="title">{song.title}</td>
-                            <td className="artist">{song.artist}</td>
                             <td className="album">{song.album}</td>
+                            <td className="artist">{song.artist}</td>
                             <td className="release-date">{song.release_date}</td>
                             <td className="genre">{song.genre}</td>
                             <td className="likes">{song.likes}</td>

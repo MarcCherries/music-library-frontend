@@ -4,7 +4,7 @@
 }
 
 .display-table {
-    width: 80%;
+    width: 60%;
     margin: auto;
 }
 
@@ -36,7 +36,7 @@
     width: 5rem;
     border: 1px solid black;
     text-align: center;
-    
+
 }
 .genre {
     width: 5rem;

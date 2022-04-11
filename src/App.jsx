@@ -8,7 +8,27 @@ function App() {
 
   const [songs, setSongs] = useState([])
   
-
+  function searchSong(input){
+    let searchResult = songs.filter((song)=>{
+  
+      if(song.title===input){ 
+          return true    
+      }
+      else if(song.artist ===input){
+          return true
+      }  
+      else if(song.album ===input){
+          return true
+      }  
+      else if(song.release_date ===input){
+          return true
+      }  
+      else if(song.genre ===input){
+          return true
+}}
+    )
+    return setSongs(searchResult)
+  }
 
   useEffect(() => {
     getAllSongs();
@@ -28,9 +48,12 @@ function App() {
 
   return (
     <div >
-    <SearchBar searchSong={searchSong}/>
+      
+          <CreateSong addSong={addSong}/>
+
     <DisplayMusic parentSongs={songs} />
-    <CreateSong addSong={addSong}/>
+    <SearchBar searchSong={searchSong}/>
+
     </div>
   );
 
