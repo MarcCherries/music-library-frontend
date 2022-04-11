@@ -1,0 +1,13 @@
+.create-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+input {
+    width: 20rem;
+    margin-top: 1rem;
+}

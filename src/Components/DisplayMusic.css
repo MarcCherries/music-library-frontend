@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+.display-table {
+    width: 80%;
+    margin: auto;
+}
+
+.title {
+    width: 10rem;
+    border: 1px solid black;
+    text-align: center;
+
+}
+.artist {
+    width: 10rem;
+    border: 1px solid black;
+    text-align: center;
+
+}
+.album {
+    width: 10rem;
+    border: 1px solid black;
+    text-align: center;
+    
+}
+.release-date {
+    width: 5rem;
+    border: 1px solid black;
+    text-align: center;
+
+}
+.likes {
+    width: 5rem;
+    border: 1px solid black;
+    text-align: center;
+    
+}
+.genre {
+    width: 5rem;
+    border: 1px solid black;
+}
