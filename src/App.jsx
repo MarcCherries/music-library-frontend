@@ -5,7 +5,7 @@ import SearchBar from './Components/SearchBar';
 import CreateSong from './Components/CreateSong';
 import UpdateSongModal from './UpdateSongModal';
 import './App.css'
-import DeleteSong from './Components/DeleteSong';
+
 import LikeSong from './LikeSong';
 
 function App() {
@@ -69,8 +69,12 @@ function App() {
     let response = await axios.get('http://127.0.0.1:8000/music/');
     setSongs(response.data); 
   }
-  async function deleteSong(song){
+  async function deleteSongasdfsdf(song){
     let response = await axios.delete(`http://127.0.0.1:8000/music/${song[0].id}/`);
+    await getAllSongs()
+  }
+  async function deleteSong(song){
+    let response = await axios.delete(`http://127.0.0.1:8000/music/${song}/`);
     await getAllSongs()
   }
 
@@ -100,7 +104,7 @@ function App() {
          </div>
       <div className='middle-column'>
        <div >
-          <DisplayMusic className='music-table' parentSongs={songs}  />
+          <DisplayMusic className='music-table' parentSongs={songs} deleteSong={deleteSong} />
           <LikeSong songs={songs} likeSong={likeSong} />
           </div>
           
@@ -108,10 +112,7 @@ function App() {
             <div className='create-song'>
           <CreateSong  addSong={addSong}/>
           </div>
-          <div className='delete-song'>
-          <DeleteSong searchSong={searchSong} deleteSong={deleteSong} songs={songs}/>
-          </div>
-       
+         
           </div>
   
           </div>

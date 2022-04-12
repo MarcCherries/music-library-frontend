@@ -3,6 +3,13 @@ import "./DisplayMusic.css"
 
 const DisplayMusic = (props) => {
 
+    function handleSubmit(event){
+        event.preventDefault();
+        props.deleteSong(event.target.value)
+        console.log(event.target.value)
+
+    }
+
   
     return ( 
         <div className="display-table">
@@ -28,6 +35,9 @@ const DisplayMusic = (props) => {
                             <td className="release-date">{song.release_date}</td>
                             <td className="genre">{song.genre}</td>
                             <td className="likes">{song.likes}</td>
+                             
+                            <button onClick={handleSubmit} type='submit' value={song.id} >Delete</button>
+                        
                          
                         </tr>
                         </table>
