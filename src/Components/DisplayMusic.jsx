@@ -3,6 +3,7 @@ import "./DisplayMusic.css"
 
 const DisplayMusic = (props) => {
 
+  
     return ( 
         <div className="display-table">
         <table>
@@ -27,6 +28,7 @@ const DisplayMusic = (props) => {
                             <td className="release-date">{song.release_date}</td>
                             <td className="genre">{song.genre}</td>
                             <td className="likes">{song.likes}</td>
+                         
                         </tr>
                         </table>
                 </div>

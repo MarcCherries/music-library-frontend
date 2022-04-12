@@ -3,8 +3,8 @@ import './SearchBar.css'
 
 const SearchBar = (props) => {
 
-    const [searchItem, setSearchItem] = useState('Please enter a term to search for: ')
-    const [searchType, setSearchType] = useState('Please enter a term to search for: ')
+    const [searchItem, setSearchItem] = useState('Enter a search term: ')
+   
     
     function submitSearch(event){
         event.preventDefault()
@@ -14,9 +14,9 @@ const SearchBar = (props) => {
     return ( 
         <div className="search-form">
             <form onSubmit={submitSearch}>
-            <input type='text'  value={searchItem} onChange={(event) => setSearchItem(event.target.value)} ></input>
-            <button type='submit'>Submit</button>
+            <input className='search-input' type='text'  value={searchItem} onChange={(event) => setSearchItem(event.target.value)} ></input>
             </form>
+            <button className='submit-search' type='submit'>Search</button>
         </div>
      );
 }

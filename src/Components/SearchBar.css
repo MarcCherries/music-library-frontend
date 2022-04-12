@@ -1,5 +1,14 @@
 .search-form {
-    width: 50%;
-    margin: auto;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    margin-bottom: 5rem;
+ 
+   
+
+}
+
+.search-input {
+    width: 10rem;
 }

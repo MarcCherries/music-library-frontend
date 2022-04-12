@@ -13,10 +13,11 @@
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
+    margin: auto;
+    padding: 1rem;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
+    margin-top: 10rem;
 }
 
 .close {
@@ -27,7 +28,7 @@
 }
 
 button {
-    width: 10rem,
+    width:auto
 
 }
 

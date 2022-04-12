@@ -2,12 +2,14 @@
     border: 2px solid black;
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
-    margin-left: 25rem;
-    margin-right: auto;
-    width: 35%;
+    font-size: medium;
+    padding: 20px;
+    width: auto;
     align-items: center;
     margin-bottom: 1rem;
+    background-color: #de4d876b;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px gray;
 }
 
 input {
@@ -19,6 +21,6 @@ input {
 button {
     width: 2rem;
     margin: 1rem;
-    margin-left: 0;
+   
    
 }

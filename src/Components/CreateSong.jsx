@@ -26,13 +26,13 @@ const CreateSong = (props) => {
 <div>
 
     <form className="create-form" onSubmit={handleSubmit}>
-    <h1>Add Song Wizard</h1>
+    <h4>Add Song Wizard</h4>
         <input type="text" value={title} onChange={(event) => setTitle(event.target.value)}></input>
         <input type="text" value={album} onChange={(event) => setAlbum(event.target.value)}></input>
         <input type="text" value={artist} onChange={(event) => setArtist(event.target.value)}></input>
         <input type="text" value={release_date} onChange={(event) => setReleaseDate(event.target.value)}></input>
         <input type="text" value={genre} onChange={(event) => setGenre(event.target.value)}></input>
-        <button  type="submit" width='2rem'></button>
+        <button  type="submit" width='2rem'>Create</button>
     </form>
 </div>
      );
