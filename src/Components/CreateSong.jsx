@@ -20,18 +20,22 @@ const CreateSong = (props) => {
             likes:0
         }
         props.addSong(newSong)
-        console.log(newSong)
+        setTitle('');
+        setArtist('');
+        setAlbum('');
+        setReleaseDate('');
+        setGenre('');
     }
     return ( 
 <div>
 
     <form className="create-form" onSubmit={handleSubmit}>
     <h4>Add Song Wizard</h4>
-        <input type="text" value={title} onChange={(event) => setTitle(event.target.value)}></input>
-        <input type="text" value={album} onChange={(event) => setAlbum(event.target.value)}></input>
-        <input type="text" value={artist} onChange={(event) => setArtist(event.target.value)}></input>
-        <input type="text" value={release_date} onChange={(event) => setReleaseDate(event.target.value)}></input>
-        <input type="text" value={genre} onChange={(event) => setGenre(event.target.value)}></input>
+        <input type="text" onDoubleClick={()=>setTitle('')} value={title} onChange={(event) => setTitle(event.target.value)}></input>
+        <input type="text" onDoubleClick={()=>setAlbum('')}value={album} onChange={(event) => setAlbum(event.target.value)}></input>
+        <input type="text" onDoubleClick={()=>setArtist('')}value={artist} onChange={(event) => setArtist(event.target.value)}></input>
+        <input type="text" onDoubleClick={()=>setReleaseDate('')}value={release_date} onChange={(event) => setReleaseDate(event.target.value)}></input>
+        <input type="text" onDoubleClick={()=>setGenre('')}value={genre} onChange={(event) => setGenre(event.target.value)}></input>
         <button  type="submit" width='2rem'>Create</button>
     </form>
 </div>

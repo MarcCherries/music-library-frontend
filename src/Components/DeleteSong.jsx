@@ -18,7 +18,8 @@ const DeleteSong = (props) => {
         })
 
     
-        props.deleteSong(toDelete)
+        props.deleteSong(toDelete);
+        setTitle('');
 
     }
     return ( 
@@ -26,7 +27,7 @@ const DeleteSong = (props) => {
 
     <form className="delete-form" onSubmit={handleSubmit}>
     <h3>Delete Song:</h3>
-        <input className='delete-input' type="text" value={title} onChange={(event) => setTitle(event.target.value)}></input>
+        <input className='delete-input' type="text" onDoubleClick={()=>setTitle('')} value={title} onChange={(event) => setTitle(event.target.value)}></input>
         
        
         <button  className="delete-button" type="submit" >Delete</button>

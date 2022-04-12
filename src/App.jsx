@@ -88,12 +88,12 @@ function App() {
           <div className='nav-area'>
           <div className='column1'>
     
-    <input type="text"  className='choice-input' onChange={(event)=> setChoice(event.target.value)} value={choice}></input>
-    <button type='submit'  onClick={()=> setModal(true)} id='myBtn' className="modal-update">Update</button>
+    <input type="text" onDoubleClick={()=>setChoice('')} className='choice-input' onChange={(event)=> setChoice(event.target.value)} value={choice} ></input>
+    <button type='submit'  onClick={()=> setModal(true)} onSubmit={()=>setChoice('')} id='myBtn' className="modal-update">Update</button>
     </div>
     <div className="center-logo"><h2 className='logo-text'>Sweet</h2><img className="image-logo" width='75' height='75' src= {require( "C:/Users/Chris/Desktop/devCodeCamp/music-library-frontend/music-library/src/Components/images/itunes.png")}></img><h2 className='logo-text'>Beats</h2></div>
     <div className='column3'>
-         <UpdateSongModal className="update-song" choice={choice} show={modal} onClose={() =>setModal(false)} updateSong={updateSong} songs={songs} searchSong={searchSongForUpdate} />
+         <UpdateSongModal className="update-song" choice={choice} show={modal} onClose={() =>setModal(false)} updateSong={updateSong} songs={songs} searchSong={searchSongForUpdate} setChoice={setChoice} />
          <SearchBar className="search-bar" searchSong={searchSong}/>
          </div>
 

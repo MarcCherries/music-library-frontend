@@ -5,13 +5,14 @@
 }
 
 .display-table {
-    width: 50rem;
+    width: auto;
     height: auto;
     margin: auto;
+    margin-right: 1.5rem;
 }
 
 .title {
-    width: 10rem;
+    width: 12rem;
     border: 1px solid black;
     text-align: center;
 
@@ -29,19 +30,19 @@
     
 }
 .release-date {
-    width: 5rem;
+    width: 6rem;
     border: 1px solid black;
     text-align: center;
 
 }
 .likes {
-    width: 5rem;
+    width: 4rem;
     border: 1px solid black;
     text-align: center;
 
 }
 .genre {
-    width: 6rem;
+    width: 7rem;
     border: 1px solid black;
 }
 

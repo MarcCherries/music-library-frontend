@@ -7,14 +7,15 @@ const SearchBar = (props) => {
    
     
     function submitSearch(event){
-        event.preventDefault()
-        props.searchSong(searchItem)  
+        event.preventDefault();
+        props.searchSong(searchItem);
+        setSearchItem('');
     }
 
     return ( 
         <div className="search-form">
             <form onSubmit={submitSearch}>
-            <input className='search-input' type='text'  value={searchItem} onChange={(event) => setSearchItem(event.target.value)} ></input>
+            <input className='search-input' type='text'  onDoubleClick={()=>setSearchItem('')} value={searchItem} onChange={(event) => setSearchItem(event.target.value)} ></input>
             </form>
             <button className='submit-search' type='submit'>Search</button>
         </div>

@@ -25,14 +25,15 @@ const LikeSong = (props) => {
             
         }
         
-        props.likeSong(newLikedSong, likedSong)
+        props.likeSong(newLikedSong, likedSong);
+        setLike('');
         
     }
 
 
     return ( 
         <div>
-            <input onChange={((event) =>setLike(event.target.value))} value={like} type="text"></input>
+            <input onDoubleClick={()=>setLike('')} onChange={((event) =>setLike(event.target.value))} value={like} type="text"></input>
             <button type='submit' onClick={handleSubmit}>Like</button>
         </div>
      );

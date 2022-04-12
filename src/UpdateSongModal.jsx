@@ -38,7 +38,13 @@ const UpdateSongModal = (props) => {
         }
             
          
-            props.updateSong(updatedSong, updateChoice)
+            props.updateSong(updatedSong, updateChoice);
+            setTitle('');
+            setArtist('');
+            setAlbum('');
+            setRelease('');
+            setGenre('');
+            props.setChoice('')
     }
 
     if (!props.show) {
@@ -54,11 +60,11 @@ const UpdateSongModal = (props) => {
                 <span onClick={props.onClose} className="close">&times;</span>
 
                 <button onClick={fillForm} type='submit'>Fill</button>
-               <input type="text" value={title} onChange={(event) => {setTitle(event.target.value)}}></input>
-               <input type="text" value={album} onChange={(event) => {setAlbum(event.target.value)}}></input>
-               <input type="text" value={artist} onChange={(event) => {setArtist(event.target.value)}}></input>
-               <input type="text" value={release} onChange={(event) => {setRelease(event.target.value)}}></input>
-               <input type="text" value={genre} onChange={(event) => {setGenre(event.target.value)}}></input>
+               <input type="text" onDoubleClick={()=>setTitle('')} value={title} onChange={(event) => {setTitle(event.target.value)}}></input>
+               <input type="text" onDoubleClick={()=>setAlbum('')} value={album} onChange={(event) => {setAlbum(event.target.value)}}></input>
+               <input type="text" onDoubleClick={()=>setArtist('')} value={artist} onChange={(event) => {setArtist(event.target.value)}}></input>
+               <input type="text" onDoubleClick={()=>setRelease('')} value={release} onChange={(event) => {setRelease(event.target.value)}}></input>
+               <input type="text" onDoubleClick={()=>setGenre('')} value={genre} onChange={(event) => {setGenre(event.target.value)}}></input>
                <button type='submit'>Submit</button>
 
               
