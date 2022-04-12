@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0
+
 }
 
 .display-table {
@@ -40,6 +41,10 @@
 
 }
 .genre {
-    width: 5rem;
+    width: 6rem;
     border: 1px solid black;
+}
+
+td {
+    font-family: cursive;
 }

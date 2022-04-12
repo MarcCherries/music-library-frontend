@@ -13,5 +13,21 @@
     border: 2px solid #e20813;
     padding: .5rem;
     margin-bottom: 2rem;
-    background-color: rgba(0, 0, 0, 0.712);
+    background-color: rgb(0, 0, 0);
+    color: red
+}
+
+button {
+    background-color: #64113f81;
+    font-size: small;
+    
+}
+
+.delete-button {
+    background-color: gray;
+}
+
+input {
+    font-size: small;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }

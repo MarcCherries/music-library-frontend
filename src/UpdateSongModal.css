@@ -1,5 +1,5 @@
 .modal {
-   
+    
     position: fixed;
     z-index: 1;
     left: 0;
@@ -8,19 +8,25 @@
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
-    background-color: rgb(0,0,0,0.4);
+    background-color: rgb(0,0,0,0.8);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#84e7f8ee;
+    margin-left: 55rem;
+    margin-top: 9rem;
+
     padding: 1rem;
     border: 1px solid #888;
-    width: 50%;
-    margin-top: 10rem;
+    width: 30%;
+   
 }
 
 .close {
+    align-self: flex-end;
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -37,4 +43,8 @@ button {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+input {
+    width: 15rem;
 }

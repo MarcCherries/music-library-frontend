@@ -6,6 +6,7 @@ import CreateSong from './Components/CreateSong';
 import UpdateSongModal from './UpdateSongModal';
 import './App.css'
 import DeleteSong from './Components/DeleteSong';
+import LikeSong from './LikeSong';
 
 function App() {
 
@@ -13,12 +14,20 @@ function App() {
   const [modal, setModal] = useState(false)
   const [choice, setChoice] = useState('Enter a song title')
 
+
  async function updateSong(updatedSong, input){
-    let response = await axios.patch(`http://127.0.0.1:8000/music/${input[0].id}/`, updatedSong) 
+    let response = await axios.put(`http://127.0.0.1:8000/music/${input[0].id}/`, updatedSong) 
     if (response.status===200) {
       await getAllSongs()
     }
 
+ }
+
+ async function likeSong (updatedSong, likedSong){
+   let response = await axios.put(`http://127.0.0.1:8000/music/${likedSong[0].id}/`, updatedSong)
+   if (response.status===200) {
+    await getAllSongs()
+  }
  }
  function searchSongForUpdate(input){
   let searchResult = songs.filter((song)=>{
@@ -72,13 +81,15 @@ function App() {
     }
     }
 
+  
+
   return (
     <div  className='app-container'>
           <div className='nav-area'>
           <div className='column1'>
     
     <input type="text"  className='choice-input' onChange={(event)=> setChoice(event.target.value)} value={choice}></input>
-    <button type='submit' onClick={()=> setModal(true)} id='myBtn' className="modal-update">Update</button>
+    <button type='submit'  onClick={()=> setModal(true)} id='myBtn' className="modal-update">Update</button>
     </div>
     <div className="center-logo"><h2 className='logo-text'>Sweet</h2><img className="image-logo" width='75' height='75' src= {require( "C:/Users/Chris/Desktop/devCodeCamp/music-library-frontend/music-library/src/Components/images/itunes.png")}></img><h2 className='logo-text'>Beats</h2></div>
     <div className='column3'>
@@ -90,6 +101,7 @@ function App() {
       <div className='middle-column'>
        <div >
           <DisplayMusic className='music-table' parentSongs={songs}  />
+          <LikeSong songs={songs} likeSong={likeSong} />
           </div>
           
           <div className='column2'>
