@@ -1,5 +1,4 @@
 .modal {
-    
     position: fixed;
     z-index: 1;
     left: 0;
@@ -16,13 +15,11 @@
     flex-direction: column;
     align-items: center;
     background-color:#84e7f8ee;
-    margin-left: 55rem;
-    margin-top: 9rem;
-
+    margin: auto;
+    margin-top: 6rem;
     padding: 1rem;
     border: 1px solid #888;
     width: 30%;
-   
 }
 
 .close {
@@ -34,8 +31,7 @@
 }
 
 button {
-    width:auto
-
+    width:auto;
 }
 
 .close:hover,

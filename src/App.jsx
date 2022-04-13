@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import DisplayMusic from './Components/DisplayMusic';
-import SearchBar from './Components/SearchBar';
-import CreateSong from './Components/CreateSong';
-import UpdateSongModal from './UpdateSongModal';
+import DisplayMusic from './Components/DisplaySongs/DisplayMusic';
+import SearchBar from './Components/SearchBar/SearchBar';
+import CreateSong from './Components/CreateSong/CreateSong';
+import UpdateSongModal from './Components/UpdateSong/UpdateSongModal';
 import './App.css'
-
-import LikeSong from './LikeSong';
 
 function App() {
 
@@ -14,13 +12,11 @@ function App() {
   const [modal, setModal] = useState(false)
   const [choice, setChoice] = useState('Enter a song title')
 
-
  async function updateSong(updatedSong, input){
     let response = await axios.put(`http://127.0.0.1:8000/music/${input[0].id}/`, updatedSong) 
     if (response.status===200) {
       await getAllSongs()
     }
-
  }
 
  async function likeSong (updatedSong, likedSong){
@@ -29,19 +25,18 @@ function App() {
     await getAllSongs()
   }
  }
- function searchSongForUpdate(input){
-  let searchResult = songs.filter((song)=>{
 
+ function searchSongForUpdate(input){
+
+  let searchResult = songs.filter((song)=>{
     if(song.title===input){ 
         return true    
     }})
     return searchResult
-  
     }
 
   function searchSong(input){
     let searchResult = songs.filter((song)=>{
-  
       if(song.title===input){ 
           return true    
       }
@@ -69,12 +64,9 @@ function App() {
     let response = await axios.get('http://127.0.0.1:8000/music/');
     setSongs(response.data); 
   }
-  async function deleteSongasdfsdf(song){
-    let response = await axios.delete(`http://127.0.0.1:8000/music/${song[0].id}/`);
-    await getAllSongs()
-  }
-  async function deleteSong(song){
-    let response = await axios.delete(`http://127.0.0.1:8000/music/${song}/`);
+
+  async function deleteSong(id){
+    let response = await axios.delete(`http://127.0.0.1:8000/music/${id}/`);
     await getAllSongs()
   }
 
@@ -85,12 +77,11 @@ function App() {
     }
     }
 
-  
 
   return (
     <div  className='app-container'>
           <div className='nav-area'>
-          <div className='column1'>
+        <div className='column1'>
     
     <input type="text" onDoubleClick={()=>setChoice('')} className='choice-input' onChange={(event)=> setChoice(event.target.value)} value={choice} ></input>
     <button type='submit'  onClick={()=> setModal(true)} onSubmit={()=>setChoice('')} id='myBtn' className="modal-update">Update</button>
@@ -104,17 +95,15 @@ function App() {
          </div>
       <div className='middle-column'>
        <div >
-          <DisplayMusic className='music-table' parentSongs={songs} deleteSong={deleteSong} />
-          <LikeSong songs={songs} likeSong={likeSong} />
+          <DisplayMusic className='music-table' parentSongs={songs} deleteSong={deleteSong} likeSong={likeSong} />
+         
           </div>
           
           <div className='column2'>
-            <div className='create-song'>
+          <div className='create-song'>
           <CreateSong  addSong={addSong}/>
           </div>
-         
           </div>
-  
           </div>
           </div>
          

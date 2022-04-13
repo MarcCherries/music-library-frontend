@@ -20,11 +20,11 @@ const CreateSong = (props) => {
             likes:0
         }
         props.addSong(newSong)
-        setTitle('');
-        setArtist('');
-        setAlbum('');
-        setReleaseDate('');
-        setGenre('');
+        setTitle('Title');
+        setArtist('Artist');
+        setAlbum('Album');
+        setReleaseDate('Release Date');
+        setGenre('Genre');
     }
     return ( 
 <div>

@@ -2,52 +2,36 @@
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: medium;
+  
 }
 
 .modal-update {
- 
-
-    
     height: 1.5rem;
     width:5rem;
 }
+
 .column1a {
     margin-top: 7rem;
 }
-.main-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: auto; 
-  
-    padding: 14px;
-
-    border: 2px solid green;
-}
-
 
 .app-container {
-    background-color: #84e7f859;
-    display: flex;
-    flex-direction: column;
-    
   
+    display: flex;
+    flex-direction: column; 
 }
-
-
 
 .search-bar {
     width: 1rem;
-    
 }
+
 .column1 {
     margin-left: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 1rem;
-
 }  
+
 .column3 {
     margin-right: 1rem;
     margin-top: 1rem;
@@ -65,7 +49,7 @@
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-   
+    
 }
 
 .nav-area {
@@ -77,9 +61,7 @@
     margin-right: 1rem;
     height: 5rem;
     border-bottom: 4px solid #64113F;
- 
-    position: relative;
-    
+    position: relative; 
 }
 
 .choice-input {
@@ -91,7 +73,6 @@
 }
 
 .center-logo {
-
     right: 40rem;
     display: flex;
     flex-direction: row;
@@ -100,7 +81,6 @@
     align-self: flex-start;
     margin-left: 2rem;
     margin-right: 2rem;
- 
 }
 
 .logo-text {
@@ -108,5 +88,6 @@
     margin-left: 2rem;
     font-size: 3rem;
     font-family: cursive;
+    background: linear-gradient(45deg, #f7cacdd2, pink, aqua, rgba(0, 255, 255, 0.123));
 }
 

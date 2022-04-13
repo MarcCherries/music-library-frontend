@@ -5,11 +5,10 @@ const SearchBar = (props) => {
 
     const [searchItem, setSearchItem] = useState('Enter a search term: ')
    
-    
     function submitSearch(event){
         event.preventDefault();
         props.searchSong(searchItem);
-        setSearchItem('');
+        setSearchItem('Enter a search term: ');
     }
 
     return ( 
